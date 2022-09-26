@@ -1,0 +1,192 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+
+* {
+    margin: 0; /* Elements like lists (ul, ol) have built in margins. We need to clear that. */
+    padding: 0; /* Same as above. */
+    box-sizing: border-box; /* With border-box set it creates the margin inside the element so the element stays its original defined size. By default if you have an element(img, div, etc) that is a width of 200px. If you add a margin: 50px to it the whole element now stretches to a width of 250px which can causes chaos with your layout. */
+    font-size: 62.5%; /* Font sizing technique. Not needed, but makes using em/rem's easier to decipher. em and rem allow you to adjust font-size's based on the users personal screen setup. If someone has changed their default browser font size to something large for accessibility reasons then using em and rem can account for that and display the website correctly for them. Alternatively, using pixels(px) you set an absolute value. Not everyone has 20-20 vision and can see a 12px font. em and rem take the users default font size and scale it appropriately.
+    
+    em = scales the font based off the parent elements font size.
+    Use this if you set a font size in your current parent div and want to down/upscale it based off that setting.
+  
+    rem = scales the font off the root element font size.
+    Use this if you want to set a font size based off the root font size you set in the body tag. 
+  
+    By default you adjust font size in em and rem by adding font-size: 1rem. 1rem = 100% of the users font setting in their browser. To get a larger font you can use 1.5rem to make it 1.5 times the size of the default font. This is a bit confusing.
+  
+    The majority of people use 16px as their default browser font size. So if you reduce all font sizes by 62.5% of 16 you can now then use rem similarly to pixels by using 1.6rem to represent 16px.
+    3.2rem = 32pixels. So you still have the luxury of knowing about how big the font will be in pixels but you get to use the much better rem unit. */
+  }
+
+
+  body {
+    font-family: "Mulish", sans-serif;
+    color: whitesmoke;
+  }
+
+/**
+  * Layout
+  */
+
+.angry-grid {
+    display: grid; 
+ 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    gap: 0px;
+    height: 100%;
+    
+ }
+   
+ #item-0 {
+ 
+    background-color: #666; 
+    grid-row-start: 1;
+    grid-column-start: 2;
+ 
+    grid-row-end: 5;
+    grid-column-end: 3;
+
+    display: flex;
+    flex-direction: column;
+    
+ }
+
+ .logo {
+    background-color: #333;
+    font-size: 4.8rem;
+    text-align: center;
+    font-weight: 700;
+ }
+
+ .profile {
+    text-align: center;
+    font-size: 2.4rem;
+    border-bottom: 2px solid black;
+ }
+
+ .profile-info {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+ }
+
+ #item-1 {
+ 
+    background-color: #555CCB;
+    grid-row-start: 1;
+    grid-column-start: 3;
+ 
+    grid-row-end: 2;
+    grid-column-end: 6;
+    
+ }
+ #item-2 {
+ 
+    background-color: #DCDFC9; 
+    grid-row-start: 2;
+    grid-column-start: 3;
+ 
+    grid-row-end: 3;
+    grid-column-end: 4;
+    
+ }
+ #item-3 {
+ 
+    background-color: #55B6D5; 
+    grid-row-start: 2;
+    grid-column-start: 4;
+ 
+    grid-row-end: 3;
+    grid-column-end: 5;
+    
+ }
+ #item-4 {
+ 
+    background-color: #BE5E68; 
+    grid-row-start: 2;
+    grid-column-start: 5;
+ 
+    grid-row-end: 3;
+    grid-column-end: 6;
+    
+ }
+ #item-5 {
+ 
+    background-color: #957CDD; 
+    grid-row-start: 3;
+    grid-column-start: 3;
+ 
+    grid-row-end: 4;
+    grid-column-end: 4;
+    
+ }
+ #item-6 {
+ 
+    background-color: #EB7EF9; 
+    grid-row-start: 3;
+    grid-column-start: 4;
+ 
+    grid-row-end: 4;
+    grid-column-end: 5;
+    
+ }
+ #item-7 {
+ 
+    background-color: #CB6BBD; 
+    grid-row-start: 3;
+    grid-column-start: 5;
+ 
+    grid-row-end: 4;
+    grid-column-end: 6;
+    
+ }
+ #item-8 {
+ 
+    background-color: #57CBCE; 
+    grid-row-start: 4;
+    grid-column-start: 3;
+ 
+    grid-row-end: 5;
+    grid-column-end: 6;
+ }
+    
+.animated-progress {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    border: 1px solid rgb(189, 113, 113);
+    overflow: hidden;
+    position: relative;
+    }
+    
+    .animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+    }
+    
+    .progress-blue span {
+    background-color: blue;
+    }
+    .progress-green span {
+    background-color: green;
+    }
+    .progress-purple span {
+    background-color: indigo;
+    }
+    .progress-red span {
+    background-color: red;
+    }
