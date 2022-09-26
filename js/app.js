@@ -1,7 +1,8 @@
+
 $(".animated-progress span").each(function () {
   $(this).animate(
     {
-      width: $(this).attr("data-progress") + "%",
+      width: $(this).attr("data-progress") + "%"
     },
     1000
   );
